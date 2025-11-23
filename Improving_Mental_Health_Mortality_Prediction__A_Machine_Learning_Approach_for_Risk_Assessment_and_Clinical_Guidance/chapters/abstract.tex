@@ -1,0 +1,13 @@
+
+
+
+\newpage
+    \begin{center}
+    
+        \vspace*{0.05cm}
+        \Large
+        \textbf{Abstract}\\
+        \vspace{0.5cm}
+    \end{center}
+    
+Timely and accurate prediction of mortality risk among patients with mental health conditions is vital for enabling early interventions and guiding clinical decision-making. This study presents a robust, data-driven framework that integrates advanced feature engineering with both statistical and machine learning models to assess mental health-related mortality risk. Utilizing a dataset of 49,083 patient hospitalizations, the model incorporates structured clinical variables including age, primary diagnosis categories, length of stay, comorbidity counts, and assessment scores. The data underwent rigorous preprocessing, including one-hot encoding, median imputation, and z-score normalization. Feature engineering techniques—such as interaction term generation and deep autoencoding—were employed to capture latent patterns and reduce input dimensionality. We evaluated five predictive approaches: XGBoost, Cox Proportional Hazards Model, L1-regularized Logistic Regression, a hybrid Autoencoder + Random Forest model, and a Multivariable Statistical Model. Model performance was assessed through stratified 10-fold cross-validation using AUC-ROC, F1 score, precision, recall, and the concordance index. XGBoost yielded the highest predictive accuracy, while the Cox model provided interpretable insights into survival risk over time. Final outputs were translated into a clinical risk scoring system designed to identify high-risk patients and support proactive care planning. This framework demonstrates the potential of machine learning to improve mortality risk stratification and clinical outcomes in mental healthcare.

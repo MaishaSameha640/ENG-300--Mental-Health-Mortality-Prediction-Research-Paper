@@ -1,0 +1,65 @@
+\vspace{-0.8cm}
+**Example of literature review**
+**Review the related previous works and Limitation of previous work**
+
+The proposed method of Md. Abdul Based \etal \cite{b12}, showed quite adequate performance by combining super resolution technique and convolution neural network. Overall accuracy of their proposed method was 98.2\%, they used 500 images for training and 200 images for testing. But, due to insufficient training and testing image data, the model is not generalized and may not be appropriate for real life usage. 
+
+
+Md. Amzad Hossain \etal \cite{b10} proposed a number plate recognition system for vehicles[10], which is intended to detect vehicle number plates from images and segment characters using  Connected Component Analysis (CCA). For character recognition, they implemented a CNN Model. The overall result of the integrated method is 96.91\%. They also used some optimizations for the representation of the number plate like the area of the number plate should be rectangular with corresponding height and width ratio. For this reason, their detection method is very naive because in real-life scenarios the images can be taken from various angles thus the license plate may not be rectangular shape always also their height and width ratio may vary from image to image. 
+
+
+Nazmus Saif \etal \cite{b13} proposed an automatic license plate recognition system [13]. They used a YOLOv3 model to detect vehicle license plates from images and recognize characters and digits from detected images. They achieved astonishing accuracy of 99.5\% accuracy. They use a self-made dataset containing 1250 license plate images to train and test their model. But they didn’t specify the number of classes in the recognition dataset which leaves a gap in their paper. They achieved 100\% accuracy in detection and 99.5\% accuracy in recognition but in five-fold cross-validation, they couldn’t achieve more than 97.01\% accuracy, they explained that introducing 200 more images in the training set led to 99.5\% accuracy but their explanation is quite naive. So lack of explanation of the dataset and the less amount of data in the train test set makes this model questionable and unfeasible to use in real-life scenarios. 
+
+The proposed model by Prashengit Dhar \etal \cite{b3}. Was trained and tested on 2800 images and achieved  accuracy of 97.3\%. In each step of their proposed system many image processing techniques were used. In the detection step they used  region of interest (roi), rgb color space, median filtering, binarization and morphological analysis. Before moving to segmentation step image processing i.e. shape verification, noise cancelation, tilt correction are implemented. Then in the recognition step they used Histogram Oriented Gradient, Local Binary Pattern and adaboost classifiers to recognize the segments. All these image processing techniques make their proposed method very hefty and time consuming.
+
+
+
+Tanmoy \etal \cite{b2} proposed a step end-to-end ALPDR system, which achieved recognition accuracy of 97.5\% but didn’t mention their detection accuracy. They used YOLOv3 for detecting license plates from vehicles, then there is an intermediate step where a custom graph-based approach is used for segmenting characters from license plates. Then they implemented a convolution neural network for recognition. Only 2284 images were used for training and testing their recognition model and their recognition model was only trained for 18 classes. Their CNN model architecture is too simple and dataset \& labels are insufficient.
+
+
+Md. Atikuzzaman \etal \cite{b4} proposed a method to detect and recognize license plates in real-time which is designed to work on video captured by a camera, which is a unique approach to the three primary aspects: plate detection, class letter segmentation, and recognition. Their recognition accuracy is 91.38\% percent. With 390 test photos, they examine the performance of the License Plate Detection system and find that it achieves 96.92\% accuracy, while segmentation achieves 94.61\% accuracy. They were able to obtain an Overall accuracy of 90.90\%.
+
+Rashik Rahman \etal \cite{b1} proposed a computationally light graph-based greedy algorithm for the segmentation of the Bangladeshi license plate from an image, which doesn’t require any detection as a pre-process. Their proposed system extracts the license plate from the whole image. 
+
+Shohei Yonetsu \etal \cite{b5} proposed a two-stage YOLOv2 method for accurate license-plate detection  which can detect license-plates in complex scenes like- nighttime scenes, blurry images, various sizes of cars, and various other objects. The first stage detects cars and then the second stage detects the license plate in the detected car region in their proposed method. 
+
+
+
+
+\begin{table}[hbt!]
+
+  \centering
+    \caption{\label{tab:Overview of Literature Review}Overview of Literature Review}
+  \begin{tabular}{|*{6}{p{2.4cm}|}}
+\hline
+\textbf {Research} & \textbf {Year} & \textbf {Dataset} & \textbf {No. of classes for recognition} & \textbf {Modeling Technique}  &  \textbf {Performance}   \\ 
+\hline
+
+Mominul Ahsan, \etal \cite{b12}  & 2021  & 700 images & 93 & Super resolution, Alexnet & Overall: 98.2\%   \\ 
+\hline
+
+Md Amzad Hossain, \etal \cite{b10}  & 2021  & 408 images & 17  & Connected component analysis, CNN & Overall: 96.91\%   \\ 
+\hline
+
+Prashengit Dhar, \etal \cite{b21}  & 2020  & 1400 images & 14 & SVM, CNN & Detection: 97.7\%, Recognition: 99.3\%  \\ 
+\hline
+
+Sarif, \etal \cite{b2}  & 2020 & 2284 images & 18 & YOLOv3, CNN & Recognition: 97.5\%  \\ 
+\hline
+
+Nazmus Saif, \etal \cite{b13}  & 2019 & 1250 images & - & YOLOv3 & Detection: 100\%, Recognition: 99.5\%  \\ 
+\hline
+
+MM Shaifur, \etal \cite{b24}  & 2019 & 2100 images & 16 & CNN & Recognition: 88.6\%  \\ 
+\hline
+
+Prashengit Dhar, \etal \cite{b3}  & 2019 & 2800 images & 14 & ROI, LBP, HOG, Adaboost classifier etc. & Recognition: 97.3\%  \\
+\hline
+
+Sohaib Abdullah, \etal \cite{b14}  & 2018 & 1500 images & 11 & YOLOv3, ResNet-20 & Recognition: 92.7\%  \\ 
+\hline
+
+\end{tabular}
+
+
+\end{table}

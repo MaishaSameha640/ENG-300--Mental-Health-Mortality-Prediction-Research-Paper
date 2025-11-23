@@ -1,0 +1,20 @@
+\vspace{-0.8cm}
+
+This study presents a comprehensive and scalable framework for predicting mortality risk among individuals with mental health conditions using structured clinical data and advanced machine learning techniques. By integrating rigorous data preprocessing, meaningful feature engineering, and a diverse set of predictive models—including XGBoost, Cox Proportional Hazards, L1-Regularized Logistic Regression, Autoencoder + Random Forest, and a Multivariable Prediction Model—we demonstrate the feasibility of building accurate and interpretable tools for risk assessment in mental health care settings.\\
+Our findings highlight that XGBoost offers superior predictive accuracy, while the Cox model provides valuable insights into time-to-event outcomes. Importantly, the use of dimensionality reduction, interaction features, and hybrid modeling strategies enhances both model performance and the ability to capture complex clinical patterns. The final output—a clinically interpretable risk scoring system—can support healthcare professionals in identifying high-risk patients earlier and guiding proactive interventions.\\
+By bridging machine learning with clinical applicability, this work contributes to the growing field of precision mental health and offers a foundation for future research into personalized care strategies and real-time clinical decision support systems. Further validation with diverse populations and real-time clinical deployment will be essential to translate these findings into practice and improve patient outcomes at scale.\\
+
+\textbf{Limitations}\\
+•	Computational Complexity: The hybrid model's reliance on deep learning components (e.g., Transformers, GNNs) may require GPU support for efficient deployment in resource-constrained healthcare systems.\\
+•	Data Heterogeneity: Limited access to standardized, multi-national EHR datasets restricts validation across diverse healthcare systems and demographic groups.\\
+•	Modality Specificity: The current framework focuses on structured EHR data and clinical notes; its extension to other data types (e.g., genetic, wearable device data) remains unexplored.\\
+•	Causal Inference: While predictive performance is strong, the model identifies associations rather than causal pathways, limiting its utility for intervention design.\\
+
+\textbf{Future Work}\\
+•	Optimization for Edge Deployment: Streamline the model for real-time risk scoring on low-resource devices (e.g., tablets, mobile apps) to broaden clinical accessibility.\\
+•	Multi-Center Validation: Collaborate with hospitals worldwide to test the framework on diverse, real-world datasets and refine it based on clinician feedback.\\
+•	Integration of Multi-Modal Data: Incorporate genetic markers, social media activity, or wearable device data to capture additional risk factors.\\
+•	Causal ML Exploration: Adapt techniques like doubly robust estimation to uncover causal relationships between interventions (e.g., medication changes) and mortality outcomes.\\
+•   Enhanced Explainability: Develop natural language interfaces to summarize risk factors and recommendations in plain language for non-technical users.\\
+
+By addressing these limitations and pursuing these future directions, our framework can evolve into a universal, equitable, and clinician-friendly tool for reducing preventable deaths in mental health populations globally.

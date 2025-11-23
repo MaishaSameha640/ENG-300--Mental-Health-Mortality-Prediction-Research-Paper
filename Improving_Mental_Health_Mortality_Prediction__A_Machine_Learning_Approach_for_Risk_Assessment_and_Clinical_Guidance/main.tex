@@ -1,0 +1,166 @@
+\documentclass[12pt]{report}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage[titletoc]{appendix}
+\usepackage{graphicx}
+\usepackage{listings}
+\graphicspath{ {images/} }
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{colortbl}%
+  \newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+\usepackage{booktabs}
+\usepackage{cite}
+% hyperlinks
+\usepackage{hyperref} 
+\hypersetup{ colorlinks, citecolor=red, filecolor=black, linkcolor=black, urlcolor=blue } 
+
+% blank page
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\usepackage{pgf}
+\usepackage{pgfpages}
+
+% Border
+% \pgfpagesdeclarelayout{boxed}
+% {
+%   \edef\pgfpageoptionborder{0pt}
+% }
+% {
+%   \pgfpagesphysicalpageoptions
+%   {%
+%     logical pages=1,%
+%   }
+%   \pgfpageslogicalpageoptions{1}
+%   {
+%     border code=\pgfsetlinewidth{0.5pt}\pgfstroke,%
+%     border shrink=\pgfpageoptionborder,%
+%     resized width=.95\pgfphysicalwidth,%
+%     resized height=.95\pgfphysicalheight,%
+%     center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+%   }%
+% }
+%\pgfpagesuselayout{boxed}
+
+% page layout including header and footer
+\usepackage{xcolor}
+\usepackage[a4paper,top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\definecolor{myred}{HTML}{581000}
+\usepackage{fancyhdr}
+
+
+ 
+
+\usepackage{caption}
+\usepackage{subcaption}
+\setcounter{page}{1}
+\setcounter{chapter}{0}
+
+
+% table format
+\usepackage{array}
+\newcolumntype{Y}{>{\centering\arraybackslash}m{4.4cm}}
+\newcolumntype{X}{>{\centering\arraybackslash}m{7cm}}
+\newcolumntype{P}{>{\centering\arraybackslash}m{2.5cm}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}m{8cm}}
+\newcolumntype{M}{>{\raggedright\arraybackslash}m{3.7cm}}
+\newcolumntype{Z}{>{\justify}m{15cm}}
+
+% references
+%\usepackage{biblatex}
+%\addbibresource{chapters/references.bib}
+\renewcommand\bibname{References}
+
+\title{
+{End to End Bangladeshi License Plate Detection \& Recognition}}
+\author{Rashik Rahman,17201012\\Mehedi UL Hasnain,17201041\\
+Rafat Meraz,17201076\\}
+\date{2021}
+
+\usepackage{nomencl}
+\makenomenclature
+
+\begin{document}
+
+% page no. roman
+\renewcommand{\thepage}{\roman{page}}
+\newcommand{\etal}{\textit{et al. }}
+
+
+
+\input{chapters/titlepage}
+
+\setstretch{1.5}
+
+%\input{chapters/certificate}
+%\input{chapters/examiner}
+%\input{chapters/acknowledgement}
+
+
+
+\input{chapters/abstract}
+\tableofcontents
+
+\setlength{\parskip}{0pt}
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+
+%\addcontentsline{toc}{chapter}{Abstract}
+%\input{chapters/abstract}
+
+
+
+
+
+%\addcontentsline{toc}{chapter}{Nomenclature}
+%\input{chapters/abbreviations}
+% \afterpage{\blankpage}
+
+
+
+%%%%%%%%%%%%
+% Chapters
+
+% page number numeric
+\clearpage
+\setcounter{page}{1}
+\setcounter{chapter}{0}
+% main page numbers:  1, 2, 3, ...
+\renewcommand{\thepage}{\arabic{page}}	
+
+\setlength{\parskip}{1em}
+
+\chapter{Introduction}\label{cha:introduction}
+Mental health disorders are a leading cause of morbidity and mortality worldwide, contributing significantly to the global burden of disease. Individuals with severe mental illness face markedly reduced life expectancy, largely due to a complex interplay of psychiatric and physical comorbidities, social determinants, and barriers to timely care. Despite growing awareness, early identification of patients at high risk of adverse outcomes—particularly mortality—remains a persistent challenge in mental health care. Traditional risk assessment methods often rely on limited clinical judgment or retrospective analyses, which may lack precision and fail to capture the nuanced, multidimensional nature of patient data.\\
+With the increasing availability of electronic health records (EHRs) and structured clinical datasets, there is an unprecedented opportunity to leverage advanced computational approaches for predictive modeling. Machine learning (ML) methods, in particular, offer the potential to identify hidden patterns in complex data, enhance prognostic accuracy, and support data-driven clinical decision-making. However, the application of ML in mental health-related mortality prediction is still in its early stages and often lacks integration with interpretable and clinically actionable outputs.\\
+In this study, we propose a predictive framework that combines structured numeric data, advanced feature engineering, and a suite of statistical and machine learning models to assess mortality risk in mental health populations. Our approach emphasizes not only predictive performance but also clinical interpretability and practical utility. The workflow involves preprocessing and transforming patient-level data, constructing enriched feature sets, and evaluating five modeling approaches: XGBoost, Cox Proportional Hazards Model, L1-Regularized Logistic Regression, a hybrid Autoencoder + Random Forest method, and a Multivariable Prediction Model.\\
+By systematically comparing these models and integrating the outputs into a risk scoring system, this research aims to bridge the gap between data science and clinical practice—providing tools that can assist mental health professionals in identifying high-risk individuals and informing early intervention strategies.\\
+\input{chapters/introduction}
+
+
+\chapter{Conclusions\label{cha:cons}}
+\input{chapters/conclusion}
+
+
+
+\bibliographystyle{plain}
+\bibliography{references.bib}
+
+\appendix 
+
+
+\end{document}
